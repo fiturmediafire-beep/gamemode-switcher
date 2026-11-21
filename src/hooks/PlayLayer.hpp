@@ -8,8 +8,9 @@ namespace switcher {
 
 struct HookPlayLayer : geode::Modify<HookPlayLayer, PlayLayer> {
     struct Fields {
-        bool m_portalsEnabled = true;
-    };
+    bool m_portalsEnabled = true;
+    geode::Ref<TeleportPortalObject> m_switchPortal;
+};
 
     int getCurrentPlayerState();
     int getCurrentBoostState();
