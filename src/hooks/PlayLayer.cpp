@@ -133,12 +133,12 @@ void HookPlayLayer::performActionOnPlayer(Action action) {
             break;
     }
 
-        if(static_cast<int>(action) <= 7 && action != Action::None) {
-        auto obj = TeleportPortalObject::create("edit_eGameRotBtn_001.png", true);
-        obj->m_cameraIsFreeMode = true;
-        m_fields->m_switchPortal = obj;
-        this->playerWillSwitchMode(m_player1, obj);
-        }
+       // if(static_cast<int>(action) <= 7 && action != Action::None) {
+      //  auto obj = TeleportPortalObject::create("edit_eGameRotBtn_001.png", true);
+     //   obj->m_cameraIsFreeMode = true;
+     //   m_fields->m_switchPortal = obj;
+    //    this->playerWillSwitchMode(m_player1, obj);
+   //     }
 }
 
 }
