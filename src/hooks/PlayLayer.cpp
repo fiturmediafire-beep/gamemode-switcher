@@ -41,6 +41,17 @@ void HookPlayLayer::performActionsOnPlayer(std::span<Action> actions) {
 }
 
 void HookPlayLayer::performActionOnPlayer(Action action) {
+  int actionId = static_cast<int>(action);
+    if (actionId >= 1 && actionId <= 7) {
+        // matiin semua mode dulu sebelum nyalain yang baru
+        m_player1->toggleFlyMode(false, false);
+        m_player1->toggleRollMode(false, false);
+        m_player1->toggleBirdMode(false, false);
+        m_player1->toggleDartMode(false, false);
+        m_player1->toggleRobotMode(false, false);
+        m_player1->toggleSpiderMode(false, false);
+        m_player1->toggleSwingMode(false, false);
+    }
     switch(action) {
         using enum Action;
         // 0-7 gamemode actions
